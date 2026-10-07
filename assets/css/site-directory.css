@@ -1,0 +1,119 @@
+.managed-person .person {
+  height: 100%;
+  position: relative;
+}
+
+.managed-person figure {
+  margin-bottom: 30px;
+}
+
+.managed-person figure img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.managed-person-trigger {
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.managed-person-trigger img {
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.managed-person-trigger:hover img,
+.managed-person-trigger:focus-visible img {
+  transform: scale(1.025);
+}
+
+.managed-person-heading {
+  margin: 0;
+}
+
+.managed-featured-person {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.managed-featured-person .person {
+  width: min(100%, 400px);
+  text-align: center;
+}
+
+.managed-person .person-contents h3 {
+  line-height: 1.35;
+}
+
+.managed-person-name {
+  max-width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.managed-person-name:hover,
+.managed-person-name:focus-visible {
+  color: #54224f;
+}
+
+.managed-person-modal-role {
+  font-weight: 600;
+}
+
+.managed-person-modal-bio {
+  text-align: justify;
+}
+
+.managed-person-modal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.managed-person-bio {
+  margin-top: 13px;
+  color: #68616f;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.managed-person-bio summary {
+  color: #54224f;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.managed-person-bio p {
+  margin: 12px 0 0;
+  white-space: pre-line;
+}
+
+.managed-person-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.managed-person-links a {
+  color: #54224f;
+  font-size: 0.85rem;
+}
+
+.managed-directory-empty {
+  padding: 28px 12px;
+  color: #68616f;
+}

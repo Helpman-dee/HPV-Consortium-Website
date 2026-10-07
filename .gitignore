@@ -1,1 +1,6 @@
 *.rar
+news-admin-config.php
+admin-users-data.php
+
+/HPV_Consortium_Web_Deployment_*.zip
+/HPV_Consortium_Website_upload.zip

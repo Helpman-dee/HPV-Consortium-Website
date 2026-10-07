@@ -1,7 +1,10 @@
 <?php
 $category = $_GET['category'];
 $dir = "images/" . basename($category);
-$images = glob($dir . "/*.{jpg,jpeg,png,webp}", GLOB_BRACE);
+$images = glob($dir . "/*.webp");
+if (!$images) {
+    $images = glob($dir . "/*.{jpg,jpeg,png}", GLOB_BRACE);
+}
 
 // If requesting a thumbnail
 if (isset($_GET['thumb'])) {

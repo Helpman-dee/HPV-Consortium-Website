@@ -16,14 +16,6 @@
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Marcellus:wght@400&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-TU3oJKlChI5EYtHVvKUkJPj5rY6lZfsnN1dFfPUv+ZC+S9A5D6jqKOCQvhZuUoRpGcbCJWHUE9Xy6V5ZqF6eNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-
-
-
-
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -34,6 +26,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/home-news.css" rel="stylesheet">
 
 
 <body class="index-page">
@@ -59,6 +52,7 @@
              </ul>
               </li>
           <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="news.html">News</a></li>
           <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="presentations.html">Presentations</a></li>
@@ -146,6 +140,20 @@
       </div>
 
     </section><!-- /Hero Section -->
+
+    <section id="latest-news" class="home-news section">
+      <div class="container">
+        <div class="home-news-heading">
+          <div>
+            <p>HPV CONSORTIUM UPDATES</p>
+            <h2>Latest news</h2>
+          </div>
+          <a href="news.html">All news <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+        <div id="home-news-list" class="row g-4" aria-live="polite"></div>
+        <p id="home-news-empty">New stories will appear here.</p>
+      </div>
+    </section>
 
    
 <section class="bg-light py-5">
@@ -532,7 +540,7 @@
                       <h2 class="service-item-title">Laboratory Research</h2>
                     </a>
                   </div>
-                  <img src="assets/img/laboratory.png" alt="Image" class="img-fluid">
+                  <img src="assets/img/laboratory.webp" alt="Image" class="img-fluid" loading="lazy">
                 </div>
               </div>
             </div>
@@ -658,6 +666,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/home-news.js"></script>
 
 </body>
 

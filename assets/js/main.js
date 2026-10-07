@@ -162,6 +162,18 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   const currentPage = window.location.pathname.split("/").pop().toLowerCase();
+  const footer = document.querySelector("#footer .copyright .container") || document.querySelector("#footer .copyright");
+
+  if (footer && !footer.querySelector('a[href="admin.php"]')) {
+    const adminLink = document.createElement("a");
+    adminLink.className = "site-admin-link";
+    adminLink.href = "admin.php";
+    const adminIcon = document.createElement("i");
+    adminIcon.className = "bi bi-shield-lock";
+    adminIcon.setAttribute("aria-hidden", "true");
+    adminLink.append(adminIcon, document.createTextNode(" Admin Login"));
+    footer.append(adminLink);
+  }
 
   document.querySelectorAll("#navmenu a").forEach(link => {
     const href = link.getAttribute("href")?.toLowerCase();

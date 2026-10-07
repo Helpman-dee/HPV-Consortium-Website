@@ -439,14 +439,17 @@ if (!$configured) {
                             $errorMessage = 'Choose a JPG, PNG or WebP image no larger than 5 MB.';
                         } else {
                             $uploadDirectory = __DIR__ . '/images/news';
-                            if (!is_dir($uploadDirectory)) {
-                                mkdir($uploadDirectory, 0755, true);
-                            }
-                            $filename = bin2hex(random_bytes(16)) . '.' . $allowedTypes[$mimeType];
-                            if (move_uploaded_file($upload['tmp_name'], $uploadDirectory . '/' . $filename)) {
-                                $newImage = 'images/news/' . $filename;
+                            if (!is_dir($uploadDirectory) && !@mkdir($uploadDirectory, 0755, true) && !is_dir($uploadDirectory)) {
+                                $errorMessage = 'The images/news folder could not be created. Create it in your hosting file manager and allow PHP to write to it.';
+                            } elseif (!is_writable($uploadDirectory)) {
+                                $errorMessage = 'The images/news folder is not writable by PHP. Ask your host to correct its ownership or write permissions.';
                             } else {
-                                $errorMessage = 'The image could not be saved. Check folder permissions.';
+                                $filename = bin2hex(random_bytes(16)) . '.' . $allowedTypes[$mimeType];
+                                if (@move_uploaded_file($upload['tmp_name'], $uploadDirectory . '/' . $filename)) {
+                                    $newImage = 'images/news/' . $filename;
+                                } else {
+                                    $errorMessage = 'The image could not be saved in images/news. Ask your host to check folder access, available disk space and PHP upload restrictions.';
+                                }
                             }
                         }
                     }
